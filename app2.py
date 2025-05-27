@@ -9,7 +9,7 @@ app2.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///weather.db'
 app2.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app2)
 
-API_KEY = 'd52f7f37b98ec662e2f882f7114936ec'
+API_KEY = ''
 
 class WeatherRecord(db.Model):
     id = db.Column(db.Integer, primary_key=True)
