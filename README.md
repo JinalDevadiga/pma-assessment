@@ -40,8 +40,7 @@ pma-assessment/<br>
 - Displays stored results in a history page.
 - Uses **Flask-SQLAlchemy** for ORM
 - Supports:
-  - 🌍 Google Maps + 🎥 YouTube video embeds
-  - (Optional) Data export features (CSV, JSON, PDF)
+  - 🌍 Google Maps
 
 ---
 
