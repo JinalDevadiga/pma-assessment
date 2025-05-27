@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head><title>Edit Record</title></head>
+<body>
+    <h1>Edit Record #{{ record.id }}</h1>
+    <form method="post">
+        <input type="text" name="location" value="{{ record.location }}" required>
+        <input type="date" name="start_date" value="{{ record.start_date }}" required>
+        <input type="date" name="end_date" value="{{ record.end_date }}" required>
+        <button type="submit">Save</button>
+    </form>
+    <a href="/history">Cancel</a>
+</body>
+</html>

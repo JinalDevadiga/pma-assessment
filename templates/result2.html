@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head><title>Results</title></head>
+<body>
+    {% if weather %}
+        <h2>Forecast for {{ location }} from {{ start_date }} to {{ end_date }}</h2>
+        <ul>
+        {% for entry in weather %}
+            <li>{{ entry.dt_txt }} - {{ entry.main.temp }}°C - {{ entry.weather[0].description }}</li>
+        {% endfor %}
+        </ul>
+
+         <!-- Google Maps Embed -->
+        <h3>Location on Map</h3>
+        <iframe 
+            width="600" 
+            height="450" 
+            style="border:0"
+            loading="lazy" 
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q={{ location | urlencode }}&output=embed">
+        </iframe>
+
+    {% else %}
+        <p>{{ error }}</p>
+    {% endif %}
+    <a href="/">Back</a> | <a href="/history">History</a>
+</body>
+</html>
